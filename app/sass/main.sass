@@ -1,0 +1,940 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	max-width: 992px
+	margin: auto
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	background-image: url(../img/bg.jpg)
+	padding: 10px
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+
+b, strong
+	font-weight: bold
+
+h3
+	color: $blue
+	font-family: BodoniCyrillic
+	margin: 0
+	font-size: 24px
+
+.logo
+	width: 170px
+	height: 75px
+	text-align: center
+	background-color: #fff
+	box-shadow: 0px 0px 2px 2px rgba(0,0,0,.1)
+	z-index: 100
+	position: relative
+	display: block
+	&:hover
+		text-decoration: none
+	h1 
+		font-size: 33px
+		color: $blue
+		font-family: BodoniBoldCyrillic
+		text-transform: uppercase
+		margin: 0
+	p 
+		color: #444444
+		font-family: arial
+		text-transform: uppercase
+		font-size: 13px
+		letter-spacing: 3px
+		
+
+.lock, .menu-humb
+	width: 30px
+	height: 35px
+	display: inline-block
+	margin-left: 10px
+	text-align: center
+	line-height: 30px
+	color: #fff
+	position: relative
+	cursor: pointer
+	&:after
+		content: ''
+		height: 5px
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		background: rgba(0,0,0, .05)
+
+.top-button
+	text-align: right
+.lock 
+	background-color: $accent
+.menu-humb	
+	background-color: $blue
+	position: relative
+	z-index: 100
+.menu
+	background: rgba(3, 83, 126, .9)
+	position: absolute
+	right: 0
+	left: 0
+	z-index: 19
+	top: 0
+	display: none
+	ul 
+		list-style: none
+		margin: 150px 0px 60px 0px
+		padding: 0
+		li 
+			border-bottom: 1px solid rgba(255, 255, 255, .1)
+			width: 100%
+			&:first-child
+				border-top: 1px solid rgba(255, 255, 255, .1)
+			a 
+				font-family: OpenSansSemiBold
+				color: #fff
+				padding-left: 40px
+				line-height: 40px
+				font-size: 14px
+				text-transform: uppercase
+
+.main-container
+	box-shadow: 0px 0px 2px 2px rgba(0,0,0,.05)
+
+.services
+	margin-top: 20px
+	background-color: #fff
+	
+	&-item
+		border: 1px solid #f6f6f6
+		text-align: center
+		padding: 20px 0
+		font-size: 18px
+		p 
+			margin: 0
+		.services_icon
+			background-image: url(../img/icons.png)
+			width: 60px
+			height: 60px
+			background-repeat: no-repeat
+			background-position: -1px 1px 
+			display: inline-block
+		&:nth-child(2) .services_icon
+			background-position: -158px 1px 
+		&:nth-child(3) .services_icon
+			background-position: 1px -71px 
+		&:nth-child(4) .services_icon
+			background-position: -147px -71px 
+		&:nth-child(5) .services_icon
+			background-position: -83px -1px 
+	
+	.services-lock
+		height: 145px
+		background-color: $accent
+		text-align: center
+		color: #fff
+		padding-top: 20px
+		font-size: 14px
+		text-transform: uppercase
+		font-family: OpenSansSemiBold
+
+	.lock_icon
+		background-image: url(../img/lock.png)
+		width: 61px
+		height: 79px
+		display: inline-block
+.gallery
+	h2 
+		padding: 20px 0
+		text-align: center
+	.gallery-item.hall
+		text-align: center
+		background-color: #fff
+	.gallery-item
+		margin-top: 100px
+		padding: 10px 0
+		
+		.gallery-item-container
+			background-color: #fff
+			box-shadow: 0 2px 3px 0px rgba(0,0,0,.1)
+			margin: 5px
+		.gallery-item-discription
+			padding: 0	10px 10px
+		&-img 
+			position: relative
+			width: 100%
+			margin: auto
+			overflow: hidden
+			top: -100px
+			img 
+				width: 100%
+				position: relative
+				display: block
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				margin: auto
+			.price
+				width: 50%
+				line-height: 32px
+				position: absolute
+				top: 0
+				left: 0
+				background-color: $blue
+				color: #fff
+				text-align: center
+				font-size: 14px
+				font-family: 'open sans'
+		.item-title
+			margin-top: -90px
+			font-size: 18px	
+			color: #000
+		p 
+			font-size: 12px
+			color: #aaaaaa
+			font-family: 'open sans'
+			font-style: italic
+.arrow-button
+	text-align: right
+	width: 100%
+	a
+		color: #000
+		text-transform: uppercase
+		font-family: 'open sans'
+		font-size: 12px
+		position: relative
+		padding-left: 65px
+		
+		&:before
+			content: ''
+			position: absolute
+			width: 60px
+			height: 15px
+			top: 0
+			left: 0
+			background-image: url(../img/long-arrow.png)
+			background-repeat: no-repeat
+			transition: .3s ease
+		&:hover
+			text-decoration: none
+			
+			&:before
+				background-position: 10px 0
+				
+
+.catalog
+	h2 
+		text-align: center
+		margin: 15px 0
+	.title 
+		font-family: bodoniBold
+		font-size: 18px
+		text-transform: uppercase
+		color: $accent
+		vertical-align: middle
+		margin-bottom: 20px
+		.title-icon
+			margin-right: 15px
+			width: 35px
+			height: 35px
+			display: inline-block
+			text-align: center
+			line-height: 30px
+			color: #fff
+			position: relative
+			cursor: pointer
+			background-color: $accent
+			vertical-align: middle
+			line-height: 40px
+			&:before
+				content: ''
+				height: 5px
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				background: rgba(0,0,0, .05)
+			&:after
+				content: ''
+				position: absolute
+				left: 0px
+				right: 0
+				width: 25px
+				bottom: -18px
+				margin: auto
+				border: 12px solid transparent
+				border-top: 6px solid $accent
+				
+	.winter
+		margin: 0 5px
+		height: 100%
+		.title-icon
+			background: $blue
+			&:after
+				border-top: 6px solid $blue
+		.title
+			color: $blue
+			
+		.catalog-list
+			background: $blue
+
+			
+	.summer
+		margin: 0 5px
+		height: 100%
+		.catalog-list
+	
+	.catalog-list
+		background-color: $accent
+		padding: 20px 0
+		margin-bottom: 20px
+		ul 
+			list-style: none
+			li
+				&:before
+					content: '\f105'
+					font-family: 'font awesome 5 pro'
+					color: #fff
+					font-size: 20px
+				a 
+					color: #fff
+					text-decoration: none
+					padding-left: 20px
+					font-size: 14px
+					font-family: 'open sans'
+					font-style: italic
+
+.food
+	h2
+		text-align: center
+
+	.food-item
+		margin-top: 20px
+		padding: 10px 0
+		
+		.food-item-container
+			background-color: #fff
+			box-shadow: 0 2px 3px 0px rgba(0,0,0,.1)
+			margin: 5px
+		.food-item-discription
+			padding: 0	10px 10px
+		&-img 
+			position: relative
+			width: 100%
+			margin: auto
+			overflow: hidden
+			top: -20px
+			img 
+				width: 100%
+				position: relative
+				display: block
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				margin: auto
+			.price
+				width: 50%
+				line-height: 32px
+				position: absolute
+				top: 0
+				left: 0
+				background-color: $blue
+				color: #fff
+				text-align: center
+				font-size: 14px
+				font-family: 'open sans'
+
+.about-us
+	margin-top: 20px
+	padding: 5px
+	background-color: #fff
+	h2 
+		margin: 0 0 10px
+	.about-us-content
+		margin-top: 20px
+	&-button
+		position: relative
+		line-height: 40px
+		text-align: center
+		color: $dark
+		text-transform: uppercase
+		font-family: 'open sans'
+		display: block
+		font-size: 11px
+		white-space: nowrap
+		&:hover
+			text-decoration: none
+		&:after
+			content: ''
+			height: 5px
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			background: rgba(0,0,0, .15)
+	.about-us-button.active
+		background-color: $accent
+		color: #fff
+
+.contacts
+	padding: 0 5px
+	h2 
+		margin: 20px 0
+
+	.map
+		height: 250px
+		width: 100%
+		padding: 20px
+footer
+	text-align: center
+	background-image: url(../img/bg2.jpg)
+	padding-top: 20px
+	.logo 
+		display: block
+		background-color: 
+		margin: auto
+		box-shadow: none
+		text-decoration: none
+		background-color: inherit
+		h1
+			color: $accent
+		p 
+			color: #fff
+	.phone
+		font-size: 14px
+		font-family: 'open sans'
+		color: #fff
+		margin: 20px 0
+		span
+			color: $accent
+			font-weight: bold
+			font-size: 20px
+		.phone-icon
+			margin-right: 15px
+			width: 35px
+			height: 40px
+			display: inline-block
+			text-align: center
+			line-height: 40px
+			color: #fff
+			position: relative
+			cursor: pointer
+			background-color: $accent
+			vertical-align: middle
+			position: relative
+			i
+				transform: rotatey(180deg)
+			&:before
+				content: ''
+				height: 5px
+				position: absolute
+				bottom: 0
+				left: 0
+				width: 100%
+				background: rgba(0,0,0, .25)
+			&:after
+				content: ''
+				position: absolute
+				width: 25px
+				height: 25px
+				right: -25px
+				top: 0
+				bottom: 0
+				margin: auto
+				border: 12px solid transparent
+				border-left: 6px solid $accent
+	.button-lock
+		position: relative
+		line-height: 50px
+		text-align: center
+		text-transform: uppercase
+		font-family: 'open sans'
+		display: block
+		font-size: 14px
+		white-space: nowrap
+		background-color: $accent
+		width: 240px
+		height: 50px
+		margin: auto
+		color: #fff
+		margin-bottom: 20px
+		i 
+			margin-right: 10px
+		&:after
+			content: ''
+			height: 5px
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			background: rgba(0,0,0, .15)
+
+	ul 
+		display: inline-block
+		text-align: left
+		list-style: none
+		padding-left: 10px
+		li
+			&:before
+				content: '\f105'
+				font-family: 'font awesome 5 pro'
+				color: #fff
+				font-size: 20px
+				color: $accent
+				vertical-align: middle
+			a 
+				color: #fff
+				text-decoration: none
+				padding-left: 10px
+				font-size: 11px
+				font-family: 'open sans'
+				text-transform: uppercase
+				&:hover
+					color: #fff
+	
+	.ae-logo
+		margin-top: 20px
+	.full
+		padding-bottom: 20px
+		a
+			color: #fff
+			font-size: 12px
+			font-family: 'open sans'
+			text-decoration: underline
+
+.page
+	.page-content
+		text-align: center
+	.crumbs
+		background-color: #fff
+		padding: 20px 0
+		margin: 20px 0
+		span 
+			background-color: $blue
+			font-size: 10px
+			margin-right: 30px
+			color: #fff
+			padding: 5px 10px
+			margin-bottom: 10px
+			display: inline-block
+			position: relative
+			&:after	
+				content: '\f178'
+				font-family: 'font awesome 5 pro'
+				color: $blue
+				position: absolute
+				right: -25px
+				line-height: 1
+				font-size: 20px
+				vertical-align: middle
+			&:last-child
+				&:after	
+					content: ''
+					margin-right: 0
+
+		span.active 
+			background-color: #fff
+			color: #b7b7b7
+
+	font-size: 16px
+	h1 
+		font-size: 36px
+		color: $blue
+		font-family: BodoniCyrillic
+		margin: 0
+		text-align: center
+		margin-bottom: 20px
+	h2
+		font-size: 30px	
+		color: $accent
+		font-family: BodoniCyrillic
+		text-align: center
+		margin-bottom: 20px
+	h3
+		text-align: center
+	.page-content-container
+		background-color: #fff
+		padding: 20px 5px
+		font-family: 'open sans'
+		box-shadow: 0px 0px 2px 2px rgba(0,0,0,.05)
+	.page-content-link
+		padding: 0 20px
+		display: flex
+		justify-content: space-between
+	.contacts-block
+		font-size: 14px
+		font-family: 'open sans'
+		display: inline-block
+		text-align: left
+		margin-bottom: 20px
+		.phone
+			font-size: 24px
+			font-family: bodoniBold
+			font-weight: bold
+		div 
+			margin-top: 20px
+		.icon
+			margin-right: 15px
+			width: 35px
+			height: 40px
+			display: inline-block
+			text-align: center
+			line-height: 30px
+			color: #fff
+			position: relative
+			cursor: pointer
+			background-color: $accent
+			vertical-align: middle
+			line-height: 40px
+			i
+				transform: rotatey(180deg)
+				font-size: 20px
+				line-height: 35px
+			&:before
+				content: ''
+				height: 5px
+				position: absolute
+				bottom: 0
+				left: 0
+				width: 100%
+				background: rgba(0,0,0, .05)
+			&:after
+				content: ''
+				position: absolute
+				right: -17px
+				height: 25px
+				bottom: 0
+				top: 0
+				margin: auto
+				border: 12px solid transparent
+				border-left: 5px solid $accent
+	.trensport
+		margin-top: 40px
+		margin-bottom: 40px
+		.transport-item
+			width: 270px
+			margin: auto
+			text-align: center
+			margin-top: 30px
+			.transport-icon
+				background-image: url(../img/transport.png)
+				background-repeat: no-repeat
+				background-position: 0 0
+				width: 140px
+				height: 80px
+				margin: auto
+		.col-12.col-sm-6		
+			&:nth-child(2) .transport-icon
+				background-position: 0 -150px
+			&:nth-child(3) .transport-icon
+				background-position: 0 -300px
+			&:nth-child(4) .transport-icon
+				background-position: 0 -405px
+
+	.position
+		font-family: 'open sans'
+		text-align: center
+		max-width: 600px
+		margin: auto
+		padding: 30px 0
+
+	.map
+		height: 500px
+
+	.gallery
+		h3
+			padding: 20px 0
+
+	.catalog-list-item
+		text-align: left
+		h3 
+			text-align: left
+			margin: 30px 0 15px
+		.price 
+			line-height: 45px
+			top: 0
+			left: 0
+			background-color: $blue
+			color: #fff
+			text-align: center
+			font-size: 14px
+			font-family: 'open sans'
+			display: inline-block
+			padding: 0 20px
+			margin-bottom: 20px
+		p 
+			font-family: 'open sans'
+			font-style: italic
+			color: #aaaaaa
+			font-size: 16px
+		.catalog-list-item-attributes
+			.attributes
+				position: relative
+				padding-left: 40px
+				margin-bottom: 20px
+				&:before
+					content: ''
+					width: 35px
+					height: 25px
+					background-repeat: no-repeat
+					background-image: url(../img/item-atr.png)
+					position: absolute
+					background-position: 0px 3px
+					left: 0
+					top: 0
+				&:nth-child(2):before
+					background-position: 0px -43px
+				&:nth-child(3):before
+					background-position: 0px -94px
+				span 
+					font-family: Bodoni
+					font-size: 20px
+					font-weight: 900
+
+	.slider
+		text-align: center
+		margin-bottom: 80px
+		.nav
+			position: relative
+			height: 45px
+			width: 100%
+			margin: 20px 0
+			.prev, .next
+				width: 48px
+				height: 15px
+				background-color: $accent
+				position: absolute
+				background-image: url(../img/long-arrow2.png)
+				background-repeat: no-repeat
+				background-position: center center 
+				height: 45px
+				width: 100px
+				transition: .3s ease
+				cursor: pointer
+				&:after
+					content: ''
+					height: 5px
+					position: absolute
+					bottom: 0
+					left: 0
+					width: 100%
+					background: rgba(0,0,0, .15)
+				&:hover
+					background-position: 5px center
+					&:after
+						height: 40px
+						bottom: 5px
+				
+			.prev
+				left: 0
+			.next 
+				right: 0
+				transform: rotatey(180deg)
+			
+	.catalog-list-item-advantages
+		text-align: center
+		font-weight: bold
+		.advantages-item
+			margin-bottom: 30px
+			.advantages-item__icon
+				background-image: url(../img/item-icon.png)
+				width: 70px
+				height: 70px
+				margin: auto
+				background-position: 6px 0
+				background-repeat: no-repeat
+		.col-6 
+			&:nth-child(2) .advantages-item .advantages-item__icon
+				background-position: -154px 0
+			&:nth-child(3) .advantages-item .advantages-item__icon
+				background-position: 5px -129px
+			&:nth-child(4) .advantages-item .advantages-item__icon
+				background-position: -150px -129px
+
+	.about-us
+		background-color: inherit
+		.about-us-button
+			background-color: #fff
+		.about-us-button.active
+			background-color: $accent
+		ul 
+			margin-top: 40px
+			list-style: none
+			padding: 0
+			li 
+				padding: 0
+				font-family: 'open sans'
+				line-height: 35px
+
+form 
+	background: #fff
+	padding: 20px
+	input
+		font-family: 'open sans'
+		font-style: italic
+		padding-left: 10px
+		border: none
+		background-color: #f9f9f9
+		border: 1px solid transparent
+		display: block
+		width: 100%
+		margin: 15px 0
+		font-size: 12px
+		&:focus 
+			border: 1px solid $accent
+	.date 
+		display: flex
+		font-size: 12px
+		justify-content: space-between
+		.date-container
+			max-width: 130px
+			font-family: 'open sans'
+			input
+				background-image: url(../img/date.png)
+				background-repeat: no-repeat
+				padding-left: 35px
+				background-position: 5px center
+				&:first-child
+					margin-right: 20px
+	.peaple
+		display: flex
+		&:first-child
+			margin-right: 20px
+	textarea
+		resize: none
+		border: none
+		background-color: #f9f9f9
+		font-size: 12px
+		font-family: 'open sans'
+		width: 100%
+		&:focus 
+			border: solid 1px $accent
+	button
+		height: 75px
+		width: 270px	
+		background-color: $accent
+		color: #fff
+		border: none
+		position: relative
+		font-family: "open sans"
+		text-transform: uppercase
+		font-size: 16px
+		padding-left: 50px
+		background-image: url(../img/lock.png)
+		background-repeat: no-repeat
+		background-size: 50px 62px
+		background-position: 25px 5px
+		margin: auto
+		display: block
+		&:after
+			content: ''
+			height: 5px
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			background: rgba(0,0,0, .15)
+.page
+	.gallery.item-list
+		.gallery-category
+			margin-top: 20px
+			&-item 
+				height: 50px
+				width: 100%
+				font-family: OpenSansSemiBoldItalic
+				font-size: 12px
+				text-transform: uppercase
+				background-color: $accent
+				margin-bottom: 10px
+				position: relative
+				line-height: 50px
+				padding-left: 20px
+				cursor: pointer
+				a
+					color: #fff
+				&:after
+					content: ''
+					height: 5px
+					position: absolute
+					bottom: 0
+					left: 0
+					width: 100%
+					background: rgba(0,0,0, .15)
+				&.active
+					background-color: $blue
+				&:hover
+					background-color: $blue
+					a 
+						text-decoration: underline
+				&:active
+					&:after
+						height: 100%
+		.price 
+			line-height: 30px
+			top: 0
+			left: 0
+			background-color: $blue
+			color: #fff
+			text-align: center
+			font-size: 14px
+			font-family: 'open sans'
+			display: inline-block
+			padding: 0 20px
+			margin-bottom: 20px
+			margin-top: 20px
+		.attributes
+				position: relative
+				padding-left: 30px
+				font-family: 'open sans'
+				font-size: 12px
+				display: inline-block
+				margin-right: 10px
+				&:before
+					content: ''
+					width: 35px
+					height: 25px
+					background-repeat: no-repeat
+					background-image: url(../img/item-atr.png)
+					position: absolute
+					background-position: 0px 3px
+					left: 0
+					top: 5px
+				&:nth-child(2):before
+					background-position: 0px -43px
+				&:nth-child(3):before
+					background-position: 0px -94px
+				span 
+					font-family: Bodoni
+					font-size: 20px
+					font-weight: 900
+@import "media" // Always at the end
